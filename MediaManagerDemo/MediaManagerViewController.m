@@ -122,23 +122,24 @@
 -(void) loadMediaList
 {
     [self.loadingIndicator setHidden:NO];
-    if (self.mediaManager.fileListState == DJIMediaFileListStateSyncing ||
-             self.mediaManager.fileListState == DJIMediaFileListStateDeleting) {
+    if (self.mediaManager.sdCardFileListState == DJIMediaFileListStateSyncing ||
+             self.mediaManager.sdCardFileListState == DJIMediaFileListStateDeleting) {
         NSLog(@"Media Manager is busy. ");
     }else {
         WeakRef(target);
-        [self.mediaManager refreshFileListWithCompletion:^(NSError * _Nullable error) {
+        [self.mediaManager refreshFileListOfStorageLocation:DJICameraStorageLocationSDCard withCompletion:^(NSError * _Nullable error) {
             WeakReturn(target);
             if (error) {
                 ShowResult(@"Fetch Media File List Failed: %@", error.localizedDescription);
             }
             else {
                 NSLog(@"Fetch Media File List Success.");
-                NSArray *mediaFileList = [target.mediaManager fileListSnapshot];
+                NSArray *mediaFileList = [target.mediaManager sdCardFileListSnapshot];
                 [target updateMediaList:mediaFileList];
             }
             [target.loadingIndicator setHidden:YES];
         }];
+        
     }
 }
 
