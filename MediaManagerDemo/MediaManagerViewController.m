@@ -10,7 +10,8 @@
 #import "DemoUtility.h"
 #import "DJIAlertView.h"
 #import "DJIScrollView.h"
-#import <VideoPreviewer/VideoPreviewer.h>
+#import <DJIWidget/DJIVideoPreviewer.h>
+#import <DJIWidget/DJIRTPlayerRenderView.h>
 
 @interface MediaManagerViewController ()<DJICameraDelegate, DJIMediaManagerDelegate, UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITextField *positionTextField;
