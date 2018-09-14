@@ -12,6 +12,7 @@
 #import "DJIScrollView.h"
 #import <DJIWidget/DJIVideoPreviewer.h>
 #import <DJIWidget/DJIRTPlayerRenderView.h>
+#import "VideoPreviewerSDKAdapter.h"
 
 @interface MediaManagerViewController ()<DJICameraDelegate, DJIMediaManagerDelegate, UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITextField *positionTextField;
@@ -32,7 +33,8 @@
 @property (nonatomic) DJIScrollView *statusView;
 @property (nonatomic, strong) NSIndexPath *selectedCellIndexPath;
 @property (nonatomic, strong) DJIRTPlayerRenderView *renderView;
-
+@property (nonatomic, strong) VideoPreviewerSDKAdapter* previewerAdapter;
+@property (nonatomic, strong) UIView *showVideoPreivewView;
 @end
 
 @implementation MediaManagerViewController
@@ -52,7 +54,25 @@
         }];
         [self loadMediaList];
     }
-
+	
+	if (camera &&
+		([camera.displayName isEqualToString:DJICameraDisplayNamePhantom4Camera] ||
+		 [camera.displayName isEqualToString:DJICameraDisplayNamePhantom4ProCamera] ||
+		 [camera.displayName isEqualToString:DJICameraDisplayNamePhantom4AdvancedCamera] ||
+		 [camera.displayName isEqualToString:DJICameraDisplayNameX4S] ||
+		 [camera.displayName isEqualToString:DJICameraDisplayNameX5S] ||
+		 [camera.displayName isEqualToString:DJICameraDisplayNameX7] ||
+		 [camera.displayName isEqualToString:DJICameraDisplayNameX3] ||
+		 [camera.displayName isEqualToString:DJICameraDisplayNameXT] ||
+		 [camera.displayName isEqualToString:DJICameraDisplayNameZ3] ||
+		 [camera.displayName isEqualToString:DJICameraDisplayNameZ30] ||
+		 [camera.displayName isEqualToString:DJICameraDisplayNameXT2Visual] ||
+		 [camera.displayName isEqualToString:DJICameraDisplayNameXT2Thermal] ||
+		 [camera.displayName isEqualToString:DJICameraDisplayNamePhantom3AdvancedCamera])) {
+			[self setupRenderViewPlaybacker];
+		} else {
+			[self setupVideoPreviewer];
+		}
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -70,6 +90,25 @@
         [camera setDelegate:nil];
         self.mediaManager.delegate = nil;
     }
+	
+	if (camera &&
+		([camera.displayName isEqualToString:DJICameraDisplayNamePhantom4Camera] ||
+		 [camera.displayName isEqualToString:DJICameraDisplayNamePhantom4ProCamera] ||
+		 [camera.displayName isEqualToString:DJICameraDisplayNamePhantom4AdvancedCamera] ||
+		 [camera.displayName isEqualToString:DJICameraDisplayNameX4S] ||
+		 [camera.displayName isEqualToString:DJICameraDisplayNameX5S] ||
+		 [camera.displayName isEqualToString:DJICameraDisplayNameX7] ||
+		 [camera.displayName isEqualToString:DJICameraDisplayNameX3] ||
+		 [camera.displayName isEqualToString:DJICameraDisplayNameXT] ||
+		 [camera.displayName isEqualToString:DJICameraDisplayNameZ3] ||
+		 [camera.displayName isEqualToString:DJICameraDisplayNameZ30] ||
+		 [camera.displayName isEqualToString:DJICameraDisplayNameXT2Visual] ||
+		 [camera.displayName isEqualToString:DJICameraDisplayNameXT2Thermal] ||
+		 [camera.displayName isEqualToString:DJICameraDisplayNamePhantom3AdvancedCamera])) {
+			[self cleanupRenderViewPlaybacker];
+		} else {
+			[self cleanupVideoPreviewer];
+		}
 }
 
 - (void)viewDidLoad {
@@ -101,23 +140,63 @@
     
     self.statusView = [DJIScrollView viewWithViewController:self];
     [self.statusView setHidden:YES];
-    
-    //Support Video Playback for Phantom 4 Professional, Inspire 2
-    H264EncoderType encoderType = H264EncoderType_unknown;
-    DJICamera *camera = [DemoUtility fetchCamera];
-    if (camera && ([camera.displayName isEqualToString:DJICameraDisplayNamePhantom4ProCamera] ||
-         [camera.displayName isEqualToString:DJICameraDisplayNamePhantom4AdvancedCamera]||
-         [camera.displayName isEqualToString:DJICameraDisplayNameX4S] ||
-         [camera.displayName isEqualToString:DJICameraDisplayNameX5S])) { //Phantom 4 Professional, Phantom 4 Advanced and Inspire 2
-        encoderType = H264EncoderType_H1_Inspire2;
-    }
+}
 
-    self.renderView = [[DJIRTPlayerRenderView alloc] initWithDecoderType:LiveStreamDecodeType_VTHardware
-                                                             encoderType:encoderType];
-    self.renderView.frame = self.videoPreviewView.bounds;
-    [self.videoPreviewView addSubview:self.renderView];
-    [self.renderView setHidden:YES];
+- (void)setupRenderViewPlaybacker
+{
+	//Support Video Playback for Phantom 4 Professional, Inspire 2
+	H264EncoderType encoderType = H264EncoderType_unknown;
+	DJICamera *camera = [DemoUtility fetchCamera];
+	if (camera && ([camera.displayName isEqualToString:DJICameraDisplayNamePhantom4ProCamera] ||
+				   [camera.displayName isEqualToString:DJICameraDisplayNamePhantom4AdvancedCamera]||
+				   [camera.displayName isEqualToString:DJICameraDisplayNameX4S] ||
+				   [camera.displayName isEqualToString:DJICameraDisplayNameX5S])) { //Phantom 4 Professional, Phantom 4 Advanced and Inspire 2
+		encoderType = H264EncoderType_H1_Inspire2;
+	}
+	
+	self.renderView = [[DJIRTPlayerRenderView alloc] initWithDecoderType:LiveStreamDecodeType_VTHardware
+															 encoderType:encoderType];
+	self.renderView.frame = self.videoPreviewView.bounds;
+	[self.videoPreviewView addSubview:self.renderView];
+	[self.renderView setHidden:YES];
+}
 
+- (void)cleanupRenderViewPlaybacker
+{
+	if (self.videoPreviewView != nil) {
+		[self.videoPreviewView removeFromSuperview];
+		self.videoPreviewView = nil;
+	}
+	
+	self.renderView = nil;
+}
+
+- (void)setupVideoPreviewer
+{
+	self.showVideoPreivewView = [[UIView alloc] initWithFrame: self.videoPreviewView.bounds];
+	[self.videoPreviewView addSubview:self.showVideoPreivewView];
+	
+	[DJIVideoPreviewer instance].type = DJIVideoPreviewerTypeAutoAdapt;
+	[[DJIVideoPreviewer instance] start];
+	[[DJIVideoPreviewer instance] reset];
+	[[DJIVideoPreviewer instance] setView:self.showVideoPreivewView];
+	self.previewerAdapter = [VideoPreviewerSDKAdapter adapterWithDefaultSettings];
+	[self.previewerAdapter start];
+#if !TARGET_IPHONE_SIMULATOR
+	[DJIVideoPreviewer instance].enableHardwareDecode = YES;
+#endif
+	//For Mavic2
+	[self.previewerAdapter setupFrameControlHandler];
+}
+
+- (void)cleanupVideoPreviewer
+{
+	if (self.showVideoPreivewView != nil) {
+		[self.showVideoPreivewView removeFromSuperview];
+		self.showVideoPreivewView = nil;
+	}
+	
+	[[DJIVideoPreviewer instance] unSetView];
 }
 
 -(void) loadMediaList
@@ -287,22 +366,8 @@
 - (IBAction)playBtnAction:(id)sender {
 
     [self.displayImageView setHidden:YES];
-    
-    DJICamera *camera = [DemoUtility fetchCamera];
-    if (camera &&
-        ([camera.displayName isEqualToString:DJICameraDisplayNamePhantom4ProCamera] ||
-         [camera.displayName isEqualToString:DJICameraDisplayNamePhantom4AdvancedCamera]||
-         [camera.displayName isEqualToString:DJICameraDisplayNameX4S] ||
-         [camera.displayName isEqualToString:DJICameraDisplayNameX5S] ||
-         [camera.displayName isEqualToString:DJICameraDisplayNameX3] ||
-         [camera.displayName isEqualToString:DJICameraDisplayNameXT] ||
-         [camera.displayName isEqualToString:DJICameraDisplayNameZ3] ||
-         [camera.displayName isEqualToString:DJICameraDisplayNameZ30])) {
-        [self.renderView setHidden:NO];
-    } else {
-        [self.renderView setHidden:YES];
-    }
-    
+	[self.renderView setHidden:NO];
+
     if ((self.selectedMedia.mediaType == DJIMediaTypeMOV) || (self.selectedMedia.mediaType == DJIMediaTypeMP4)) {
         [self.positionTextField setPlaceholder:[NSString stringWithFormat:@"%d sec", (int)self.selectedMedia.durationInSeconds]];
         [self.mediaManager playVideo:self.selectedMedia withCompletion:^(NSError * _Nullable error) {

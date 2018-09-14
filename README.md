@@ -10,6 +10,7 @@ This demo is designed for you to learn how to use `DJIMediaManager` to interact 
  - Xcode 8.0+
  - DJI iOS SDK 4.7.1
  - DJI iOS UX SDK 4.7.1
+ - DJIWidget 1.0
 
 ## SDK Installation with CocoaPods
 
@@ -40,6 +41,7 @@ Analyzing dependencies
 Downloading dependencies
 Installing DJI-SDK-iOS (4.7.1)
 Installing DJI-UXSDK-iOS (4.7.1)
+Installing DJIWidget (1.0)
 Generating Pods project
 Integrating client project
 
@@ -82,7 +84,6 @@ Please use **Github Issue** or **email** [oliver.ou@dji.com](oliver.ou@dji.com) 
 ## License
 
 iOS-MediaManagerDemo is available under the MIT license. Please see the LICENSE file for more info.
-
 
 ## Join Us
 

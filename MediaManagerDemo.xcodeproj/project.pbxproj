@@ -7,15 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14FF8D70213EA37900B23316 /* VideoPreviewerSDKAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 14FF8D6C213EA37900B23316 /* VideoPreviewerSDKAdapter.m */; };
+		14FF8D71213EA37900B23316 /* DJIDecodeImageCalibrateControlLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = 14FF8D6D213EA37900B23316 /* DJIDecodeImageCalibrateControlLogic.m */; };
+		14FF8D72213EA37900B23316 /* VideoPreviewerSDKAdapter+Lightbridge2.m in Sources */ = {isa = PBXBuildFile; fileRef = 14FF8D6E213EA37900B23316 /* VideoPreviewerSDKAdapter+Lightbridge2.m */; };
+		14FF8D78213EA80500B23316 /* DemoComponentHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 14FF8D76213EA80400B23316 /* DemoComponentHelper.m */; };
 		317B34F601CB66126DC5DF33 /* libPods-MediaManagerDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F93468817560E474214349DF /* libPods-MediaManagerDemo.a */; };
 		A41CA8BA1F39962B0087BE43 /* DemoUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = A41CA8B41F39962B0087BE43 /* DemoUtility.m */; };
 		A41CA8BB1F39962B0087BE43 /* DJIAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = A41CA8B61F39962B0087BE43 /* DJIAlertView.m */; };
 		A41CA8BC1F39962B0087BE43 /* DJIScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = A41CA8B81F39962B0087BE43 /* DJIScrollView.m */; };
 		A41CA8BD1F39962B0087BE43 /* DJIScrollView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A41CA8B91F39962B0087BE43 /* DJIScrollView.xib */; };
-		A469858D213433C2001A1F08 /* DJIWidget.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A469858C213433BB001A1F08 /* DJIWidget.framework */; };
-		A469858E213433C2001A1F08 /* DJIWidget.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A469858C213433BB001A1F08 /* DJIWidget.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A4698592213433CF001A1F08 /* FFmpeg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4698591213433CF001A1F08 /* FFmpeg.framework */; };
-		A4698593213433CF001A1F08 /* FFmpeg.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A4698591213433CF001A1F08 /* FFmpeg.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A4E313D01F3022AC001203C6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E313CF1F3022AC001203C6 /* main.m */; };
 		A4E313D31F3022AC001203C6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E313D21F3022AC001203C6 /* AppDelegate.m */; };
 		A4E313D61F3022AC001203C6 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E313D51F3022AC001203C6 /* MainViewController.m */; };
@@ -26,23 +26,6 @@
 		A4E313F91F30281C001203C6 /* MediaManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E313F81F30281C001203C6 /* MediaManagerViewController.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		A469858B213433BB001A1F08 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A4698587213433BB001A1F08 /* DJIWidget.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 2E54A2CD1F4A904000916B4D;
-			remoteInfo = DJIWidget;
-		};
-		A469858F213433C2001A1F08 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A4698587213433BB001A1F08 /* DJIWidget.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 2E54A2CC1F4A904000916B4D;
-			remoteInfo = DJIWidget;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXCopyFilesBuildPhase section */
 		A4E313EF1F3024C7001203C6 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -50,8 +33,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				A469858E213433C2001A1F08 /* DJIWidget.framework in Embed Frameworks */,
-				A4698593213433CF001A1F08 /* FFmpeg.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -60,6 +41,14 @@
 
 /* Begin PBXFileReference section */
 		0BDC738B2EB46ED9C0C96850 /* Pods-MediaManagerDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MediaManagerDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MediaManagerDemo/Pods-MediaManagerDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		14FF8D6A213EA37900B23316 /* VideoPreviewerSDKAdapter+Lightbridge2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "VideoPreviewerSDKAdapter+Lightbridge2.h"; sourceTree = "<group>"; };
+		14FF8D6B213EA37900B23316 /* DJIDecodeImageCalibrateControlLogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJIDecodeImageCalibrateControlLogic.h; sourceTree = "<group>"; };
+		14FF8D6C213EA37900B23316 /* VideoPreviewerSDKAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoPreviewerSDKAdapter.m; sourceTree = "<group>"; };
+		14FF8D6D213EA37900B23316 /* DJIDecodeImageCalibrateControlLogic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJIDecodeImageCalibrateControlLogic.m; sourceTree = "<group>"; };
+		14FF8D6E213EA37900B23316 /* VideoPreviewerSDKAdapter+Lightbridge2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "VideoPreviewerSDKAdapter+Lightbridge2.m"; sourceTree = "<group>"; };
+		14FF8D6F213EA37900B23316 /* VideoPreviewerSDKAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoPreviewerSDKAdapter.h; sourceTree = "<group>"; };
+		14FF8D76213EA80400B23316 /* DemoComponentHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoComponentHelper.m; sourceTree = "<group>"; };
+		14FF8D77213EA80400B23316 /* DemoComponentHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoComponentHelper.h; sourceTree = "<group>"; };
 		2247A303FAF91BC28A12F8AB /* Pods-MediaManagerDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MediaManagerDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-MediaManagerDemo/Pods-MediaManagerDemo.release.xcconfig"; sourceTree = "<group>"; };
 		A41CA8B31F39962B0087BE43 /* DemoUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoUtility.h; sourceTree = "<group>"; };
 		A41CA8B41F39962B0087BE43 /* DemoUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoUtility.m; sourceTree = "<group>"; };
@@ -68,8 +57,6 @@
 		A41CA8B71F39962B0087BE43 /* DJIScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJIScrollView.h; sourceTree = "<group>"; };
 		A41CA8B81F39962B0087BE43 /* DJIScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJIScrollView.m; sourceTree = "<group>"; };
 		A41CA8B91F39962B0087BE43 /* DJIScrollView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DJIScrollView.xib; sourceTree = "<group>"; };
-		A4698587213433BB001A1F08 /* DJIWidget.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DJIWidget.xcodeproj; path = DJIWidget/DJIWidget.xcodeproj; sourceTree = "<group>"; };
-		A4698591213433CF001A1F08 /* FFmpeg.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FFmpeg.framework; path = DJIWidget/FFmpeg/FFmpeg.framework; sourceTree = "<group>"; };
 		A4E313CB1F3022AC001203C6 /* MediaManagerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MediaManagerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4E313CF1F3022AC001203C6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A4E313D11F3022AC001203C6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -92,19 +79,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A469858D213433C2001A1F08 /* DJIWidget.framework in Frameworks */,
 				317B34F601CB66126DC5DF33 /* libPods-MediaManagerDemo.a in Frameworks */,
-				A4698592213433CF001A1F08 /* FFmpeg.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		14FF8D69213EA37900B23316 /* VideoPreviewerAdapter */ = {
+			isa = PBXGroup;
+			children = (
+				14FF8D6A213EA37900B23316 /* VideoPreviewerSDKAdapter+Lightbridge2.h */,
+				14FF8D6E213EA37900B23316 /* VideoPreviewerSDKAdapter+Lightbridge2.m */,
+				14FF8D6B213EA37900B23316 /* DJIDecodeImageCalibrateControlLogic.h */,
+				14FF8D6D213EA37900B23316 /* DJIDecodeImageCalibrateControlLogic.m */,
+				14FF8D6F213EA37900B23316 /* VideoPreviewerSDKAdapter.h */,
+				14FF8D6C213EA37900B23316 /* VideoPreviewerSDKAdapter.m */,
+			);
+			path = VideoPreviewerAdapter;
+			sourceTree = "<group>";
+		};
 		5E6497AD000CAC9D240CF05E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A4698587213433BB001A1F08 /* DJIWidget.xcodeproj */,
 				F93468817560E474214349DF /* libPods-MediaManagerDemo.a */,
 			);
 			name = Frameworks;
@@ -124,6 +121,8 @@
 			children = (
 				A41CA8B31F39962B0087BE43 /* DemoUtility.h */,
 				A41CA8B41F39962B0087BE43 /* DemoUtility.m */,
+				14FF8D77213EA80400B23316 /* DemoComponentHelper.h */,
+				14FF8D76213EA80400B23316 /* DemoComponentHelper.m */,
 				A41CA8B51F39962B0087BE43 /* DJIAlertView.h */,
 				A41CA8B61F39962B0087BE43 /* DJIAlertView.m */,
 				A41CA8B71F39962B0087BE43 /* DJIScrollView.h */,
@@ -133,18 +132,9 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
-		A4698588213433BB001A1F08 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				A469858C213433BB001A1F08 /* DJIWidget.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		A4E313C21F3022AC001203C6 = {
 			isa = PBXGroup;
 			children = (
-				A4698591213433CF001A1F08 /* FFmpeg.framework */,
 				A4E313CD1F3022AC001203C6 /* MediaManagerDemo */,
 				A4E313CC1F3022AC001203C6 /* Products */,
 				6D18B6EE67100DF7A404515F /* Pods */,
@@ -163,6 +153,7 @@
 		A4E313CD1F3022AC001203C6 /* MediaManagerDemo */ = {
 			isa = PBXGroup;
 			children = (
+				14FF8D69213EA37900B23316 /* VideoPreviewerAdapter */,
 				A4E313D11F3022AC001203C6 /* AppDelegate.h */,
 				A4E313D21F3022AC001203C6 /* AppDelegate.m */,
 				A4E313D41F3022AC001203C6 /* MainViewController.h */,
@@ -201,13 +192,12 @@
 				A4E313C81F3022AC001203C6 /* Frameworks */,
 				A4E313C91F3022AC001203C6 /* Resources */,
 				EEB948C9786D3A70E487EBBA /* [CP] Embed Pods Frameworks */,
-				CF5B2C00E5BB947EEF53E8E0 /* [CP] Copy Pods Resources */,
 				A4E313EF1F3024C7001203C6 /* Embed Frameworks */,
+				BCBD8EE4AC38C1EA5041D00C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				A4698590213433C2001A1F08 /* PBXTargetDependency */,
 			);
 			name = MediaManagerDemo;
 			productName = MediaManagerDemo;
@@ -241,28 +231,12 @@
 			mainGroup = A4E313C21F3022AC001203C6;
 			productRefGroup = A4E313CC1F3022AC001203C6 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = A4698588213433BB001A1F08 /* Products */;
-					ProjectRef = A4698587213433BB001A1F08 /* DJIWidget.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				A4E313CA1F3022AC001203C6 /* MediaManagerDemo */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		A469858C213433BB001A1F08 /* DJIWidget.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = DJIWidget.framework;
-			remoteRef = A469858B213433BB001A1F08 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		A4E313C91F3022AC001203C6 /* Resources */ = {
@@ -285,16 +259,19 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MediaManagerDemo-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		CF5B2C00E5BB947EEF53E8E0 /* [CP] Copy Pods Resources */ = {
+		BCBD8EE4AC38C1EA5041D00C /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -315,9 +292,14 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MediaManagerDemo/Pods-MediaManagerDemo-frameworks.sh",
+				"${PODS_ROOT}/DJI-SDK-iOS/iOS_Mobile_SDK/DJISDK.framework",
+				"${PODS_ROOT}/DJI-UXSDK-iOS/iOS_UXSDK/DJIUXSDK.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DJISDK.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DJIUXSDK.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -331,11 +313,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14FF8D78213EA80500B23316 /* DemoComponentHelper.m in Sources */,
+				14FF8D71213EA37900B23316 /* DJIDecodeImageCalibrateControlLogic.m in Sources */,
 				A4E313D61F3022AC001203C6 /* MainViewController.m in Sources */,
 				A4E313D31F3022AC001203C6 /* AppDelegate.m in Sources */,
 				A4E313F91F30281C001203C6 /* MediaManagerViewController.m in Sources */,
 				A41CA8BC1F39962B0087BE43 /* DJIScrollView.m in Sources */,
+				14FF8D70213EA37900B23316 /* VideoPreviewerSDKAdapter.m in Sources */,
 				A41CA8BA1F39962B0087BE43 /* DemoUtility.m in Sources */,
+				14FF8D72213EA37900B23316 /* VideoPreviewerSDKAdapter+Lightbridge2.m in Sources */,
 				A41CA8BB1F39962B0087BE43 /* DJIAlertView.m in Sources */,
 				A4E313F31F302606001203C6 /* DefaultLayoutViewController.m in Sources */,
 				A4E313D01F3022AC001203C6 /* main.m in Sources */,
@@ -343,14 +329,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		A4698590213433C2001A1F08 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = DJIWidget;
-			targetProxy = A469858F213433C2001A1F08 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		A4E313D71F3022AC001203C6 /* Main.storyboard */ = {
@@ -469,13 +447,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7UL3LRJL93;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/DJIWidget/FFmpeg",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = MediaManagerDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dji.mediaManagerDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dji.sdksamplecode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -487,13 +462,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7UL3LRJL93;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/DJIWidget/FFmpeg",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = MediaManagerDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dji.mediaManagerDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dji.sdksamplecode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
