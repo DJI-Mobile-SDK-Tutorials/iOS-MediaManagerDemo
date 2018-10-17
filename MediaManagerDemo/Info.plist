@@ -19,7 +19,7 @@
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>DJISDKAppKey</key>
-	<string></string>
+	<string>Please enter your app key here.</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>
@@ -29,6 +29,8 @@
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Gets location of the phone to calculate distance to aircraft</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Test</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string></string>
 	<key>UILaunchStoryboardName</key>

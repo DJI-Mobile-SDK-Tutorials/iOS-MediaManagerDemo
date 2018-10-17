@@ -16,6 +16,7 @@
 		A41CA8BB1F39962B0087BE43 /* DJIAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = A41CA8B61F39962B0087BE43 /* DJIAlertView.m */; };
 		A41CA8BC1F39962B0087BE43 /* DJIScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = A41CA8B81F39962B0087BE43 /* DJIScrollView.m */; };
 		A41CA8BD1F39962B0087BE43 /* DJIScrollView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A41CA8B91F39962B0087BE43 /* DJIScrollView.xib */; };
+		A44F554C21776C4100FC3003 /* DistortionResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A44F554B21776C4100FC3003 /* DistortionResource.bundle */; };
 		A4E313D01F3022AC001203C6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E313CF1F3022AC001203C6 /* main.m */; };
 		A4E313D31F3022AC001203C6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E313D21F3022AC001203C6 /* AppDelegate.m */; };
 		A4E313D61F3022AC001203C6 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E313D51F3022AC001203C6 /* MainViewController.m */; };
@@ -57,6 +58,7 @@
 		A41CA8B71F39962B0087BE43 /* DJIScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJIScrollView.h; sourceTree = "<group>"; };
 		A41CA8B81F39962B0087BE43 /* DJIScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJIScrollView.m; sourceTree = "<group>"; };
 		A41CA8B91F39962B0087BE43 /* DJIScrollView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DJIScrollView.xib; sourceTree = "<group>"; };
+		A44F554B21776C4100FC3003 /* DistortionResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DistortionResource.bundle; sourceTree = "<group>"; };
 		A4E313CB1F3022AC001203C6 /* MediaManagerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MediaManagerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4E313CF1F3022AC001203C6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A4E313D11F3022AC001203C6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -132,6 +134,14 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		A44F554A21776C1B00FC3003 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				A44F554B21776C4100FC3003 /* DistortionResource.bundle */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		A4E313C21F3022AC001203C6 = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +174,7 @@
 				A4E313F81F30281C001203C6 /* MediaManagerViewController.m */,
 				A4E313D71F3022AC001203C6 /* Main.storyboard */,
 				A41CA8B21F39962B0087BE43 /* Utilities */,
+				A44F554A21776C1B00FC3003 /* Resource */,
 				A4E313DA1F3022AC001203C6 /* Assets.xcassets */,
 				A4E313DC1F3022AC001203C6 /* LaunchScreen.storyboard */,
 				A4E313DF1F3022AC001203C6 /* Info.plist */,
@@ -246,6 +257,7 @@
 				A4E313DE1F3022AC001203C6 /* LaunchScreen.storyboard in Resources */,
 				A4E313DB1F3022AC001203C6 /* Assets.xcassets in Resources */,
 				A4E313D91F3022AC001203C6 /* Main.storyboard in Resources */,
+				A44F554C21776C4100FC3003 /* DistortionResource.bundle in Resources */,
 				A41CA8BD1F39962B0087BE43 /* DJIScrollView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -450,7 +462,7 @@
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = MediaManagerDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dji.sdksamplecode;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dji.mediaManagerDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -465,7 +477,7 @@
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = MediaManagerDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dji.sdksamplecode;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dji.mediaManagerDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

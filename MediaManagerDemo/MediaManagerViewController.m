@@ -13,6 +13,7 @@
 #import <DJIWidget/DJIVideoPreviewer.h>
 #import <DJIWidget/DJIRTPlayerRenderView.h>
 #import "VideoPreviewerSDKAdapter.h"
+#import <Photos/Photos.h>
 
 @interface MediaManagerViewController ()<DJICameraDelegate, DJIMediaManagerDelegate, UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITextField *positionTextField;
@@ -429,10 +430,16 @@
 -(void) savePhotoWithData:(NSData*)data
 {
     if (data) {
-        UIImage* image = [UIImage imageWithData:data];
-        if (image) {
-            UIImageWriteToSavedPhotosAlbum(image, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
-        }
+		NSString *tmpDir =  NSTemporaryDirectory();
+		NSString *tmpImageFilePath = [tmpDir stringByAppendingPathComponent:@"tmpimage.jpg"];
+		[data writeToFile:tmpImageFilePath atomically:YES];
+		
+		NSURL *imageURL = [NSURL URLWithString:tmpImageFilePath];
+		[[PHPhotoLibrary sharedPhotoLibrary] performChanges:^{
+			__unused PHAssetChangeRequest *req = [PHAssetChangeRequest creationRequestForAssetFromImageAtFileURL:imageURL];
+		} completionHandler:^(BOOL success, NSError * _Nullable error) {
+			NSLog(@"success = %d, error = %@", success, error);
+		}];
     }
 }
 
