@@ -11,7 +11,7 @@
 		14FF8D71213EA37900B23316 /* DJIDecodeImageCalibrateControlLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = 14FF8D6D213EA37900B23316 /* DJIDecodeImageCalibrateControlLogic.m */; };
 		14FF8D72213EA37900B23316 /* VideoPreviewerSDKAdapter+Lightbridge2.m in Sources */ = {isa = PBXBuildFile; fileRef = 14FF8D6E213EA37900B23316 /* VideoPreviewerSDKAdapter+Lightbridge2.m */; };
 		14FF8D78213EA80500B23316 /* DemoComponentHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 14FF8D76213EA80400B23316 /* DemoComponentHelper.m */; };
-		317B34F601CB66126DC5DF33 /* libPods-MediaManagerDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F93468817560E474214349DF /* libPods-MediaManagerDemo.a */; };
+		2EF53DE212C23CFC55BC0728 /* Pods_MediaManagerDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 138448A2BD052583B81674CB /* Pods_MediaManagerDemo.framework */; };
 		A41CA8BA1F39962B0087BE43 /* DemoUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = A41CA8B41F39962B0087BE43 /* DemoUtility.m */; };
 		A41CA8BB1F39962B0087BE43 /* DJIAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = A41CA8B61F39962B0087BE43 /* DJIAlertView.m */; };
 		A41CA8BC1F39962B0087BE43 /* DJIScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = A41CA8B81F39962B0087BE43 /* DJIScrollView.m */; };
@@ -42,6 +42,7 @@
 
 /* Begin PBXFileReference section */
 		0BDC738B2EB46ED9C0C96850 /* Pods-MediaManagerDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MediaManagerDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MediaManagerDemo/Pods-MediaManagerDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		138448A2BD052583B81674CB /* Pods_MediaManagerDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MediaManagerDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		14FF8D6A213EA37900B23316 /* VideoPreviewerSDKAdapter+Lightbridge2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "VideoPreviewerSDKAdapter+Lightbridge2.h"; sourceTree = "<group>"; };
 		14FF8D6B213EA37900B23316 /* DJIDecodeImageCalibrateControlLogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJIDecodeImageCalibrateControlLogic.h; sourceTree = "<group>"; };
 		14FF8D6C213EA37900B23316 /* VideoPreviewerSDKAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoPreviewerSDKAdapter.m; sourceTree = "<group>"; };
@@ -73,7 +74,6 @@
 		A4E313F21F302606001203C6 /* DefaultLayoutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefaultLayoutViewController.m; sourceTree = "<group>"; };
 		A4E313F71F30281C001203C6 /* MediaManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaManagerViewController.h; sourceTree = "<group>"; };
 		A4E313F81F30281C001203C6 /* MediaManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaManagerViewController.m; sourceTree = "<group>"; };
-		F93468817560E474214349DF /* libPods-MediaManagerDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MediaManagerDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				317B34F601CB66126DC5DF33 /* libPods-MediaManagerDemo.a in Frameworks */,
+				2EF53DE212C23CFC55BC0728 /* Pods_MediaManagerDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,7 +104,7 @@
 		5E6497AD000CAC9D240CF05E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F93468817560E474214349DF /* libPods-MediaManagerDemo.a */,
+				138448A2BD052583B81674CB /* Pods_MediaManagerDemo.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
