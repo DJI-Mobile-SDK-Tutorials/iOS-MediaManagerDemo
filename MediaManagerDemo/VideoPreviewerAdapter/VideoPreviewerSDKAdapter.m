@@ -407,7 +407,7 @@ const static NSTimeInterval REFRESH_INTERVAL = 1.0;
 }
 
 - (BOOL)parseDecodingAssistInfoWithBuffer:(uint8_t *)buffer length:(int)length assistInfo:(DJIDecodingAssistInfo *)assistInfo {
-	return [[DJISDKManager videoFeeder] parseDecodingAssistInfoWithBuffer:buffer length:length assistInfo:(void *)assistInfo];
+    return [self.videoFeed parseDecodingAssistInfoWithBuffer:buffer length:length assistInfo:(void *)assistInfo];
 }
 
 - (BOOL)isNeedFitFrameWidth {
@@ -421,15 +421,15 @@ const static NSTimeInterval REFRESH_INTERVAL = 1.0;
 }
 
 - (void)syncDecoderStatus:(BOOL)isNormal {
-	[[DJISDKManager videoFeeder] syncDecoderStatus:isNormal];
+    [self.videoFeed syncDecoderStatus:isNormal];
 }
 
 - (void)decodingDidSucceedWithTimestamp:(uint32_t)timestamp {
-	[[DJISDKManager videoFeeder] decodingDidSucceedWithTimestamp:(NSUInteger)timestamp];
+    [self.videoFeed decodingDidSucceedWithTimestamp:(NSUInteger)timestamp];
 }
 
 - (void)decodingDidFail {
-	[[DJISDKManager videoFeeder] decodingDidFail];
+    [self.videoFeed decodingDidFail];
 }
 
 @end
