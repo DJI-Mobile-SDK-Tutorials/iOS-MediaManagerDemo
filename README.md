@@ -8,7 +8,7 @@ This demo is designed for you to learn how to use `DJIMediaManager` to interact 
 
  - iOS 9.0+
  - Xcode 8.0+
- - DJI iOS SDK 4.13
+ - DJI iOS SDK 4.13.1
  - DJI iOS UX SDK 4.13
  - DJIWidget 1.6.3
 
@@ -39,7 +39,7 @@ If you install it successfully, you should get the messages similar to the follo
 ~~~
 Analyzing dependencies
 Downloading dependencies
-Installing DJI-SDK-iOS (4.13)
+Installing DJI-SDK-iOS (4.13.1)
 Installing DJI-UXSDK-iOS (4.13)
 Installing DJIWidget (1.6.3)
 Generating Pods project
