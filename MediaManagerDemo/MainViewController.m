@@ -98,6 +98,15 @@
     }];
 }
 
+- (void)productChanged:(DJIBaseProduct *_Nullable)product {
+    if (product) {
+        self.product = product;
+        [self.connectButton setEnabled:YES];
+    }
+    
+    [self updateStatusBasedOn:product];
+}
+
 - (void)productDisconnected
 {
     NSString* message = [NSString stringWithFormat:@"Connection lost. Back to root. "];
