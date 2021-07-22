@@ -243,6 +243,7 @@
         }
     }
     
+    [self.mediaTableView reloadData];
     [self.reloadBtn setEnabled:YES];
     [self.editBtn setEnabled:YES];
 }
